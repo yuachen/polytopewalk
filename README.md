@@ -1,5 +1,5 @@
 # Implementation of Random Walks on Polytopes
-Implementation of Vaidya walk and John walk introduced by the paper "Fast MCMC Algorithms on Polytopes"
+C++ implementation with python wrapper of Vaidya walk and John walk introduced by the paper "Fast MCMC Algorithms on Polytopes"
 https://arxiv.org/abs/1710.08165
 by Yuansi Chen, Raaz Dwivedi, Martin J. Wainwright, Bin Yu
 
