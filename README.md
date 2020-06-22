@@ -31,13 +31,17 @@ samples_john = pw.run_john_walk(nb_samples, nb_iters, A, b, r)
 
 ## License and Citation
 Code is released under MIT License.
-Please cite the paper if the code helps your research:
+Please cite the following paper if the code helps your research:
 
 ```bib
-@article{chen2017fast,
-    title={Fast MCMC sampling algorithms on polytopes},
-    author={Chen, Yuansi and Dwivedi, Raaz and Wainwright, Martin J and Yu, Bin},
-    journal={arXiv preprint arXiv:1710.08165},
-    year={2017}
+@article{chen2018fast,
+  title={Fast MCMC sampling algorithms on polytopes},
+  author={Chen, Yuansi and Dwivedi, Raaz and Wainwright, Martin J and Yu, Bin},
+  journal={The Journal of Machine Learning Research},
+  volume={19},
+  number={1},
+  pages={2146--2231},
+  year={2018},
+  publisher={JMLR. org}
 }
 ```
