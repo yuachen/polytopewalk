@@ -30,7 +30,7 @@ samples_john = pw.run_john_walk(nb_samples, nb_iters, A, b, r)
 
 
 ## License and Citation
-Code is released under MIT License.
+Code is released under [MIT License](https://github.com/yuachen/polytopewalk/blob/master/LICENSE).
 Please cite the following paper if the code helps your research:
 
 ```bib
