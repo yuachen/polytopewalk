@@ -47,13 +47,15 @@ print(srcFiles)
 # to file a  pull request with a fix if it doesn't work on yours)
 if sys.platform == 'darwin':
     # default to clang++ as this is most likely to have c++11 support on OSX
-    if "CC" not in os.environ or os.environ["CC"] == "":
+    if "CC" not in os.environ or "CXX" not in os.environ or os.environ["CC"] == "":
         os.environ["CC"] = "clang++"
+        os.environ["CXX"] = "clang++"
         # we need to set the min os x version for clang to be okay with
         # letting us use c++11; also, we don't use dynamic_cast<>, so
         # we can compile without RTTI to avoid its overhead
-        extra_args = ["-O3", "-stdlib=libc++",
-                      "-mmacosx-version-min=10.7", "-fno-rtti"]
+        extra_args = ["-std=c++11", "-stdlib=libc++",
+                      "-mmacosx-version-min=10.9", "-fno-rtti"]
+        extra_link_args=["-stdlib=libc++"]
 else:  # not supported yet. to be tested
     os.environ["CC"] = "g++"  # force compiling c as c++
     extra_args = ['-fno-rtti']
@@ -63,7 +65,8 @@ _pwalk = Extension("_pwalk",
                    srcFiles,
                    include_dirs=includeDirs,
                    swig_opts=['-c++'],
-                   extra_compile_args=extra_args)
+                   extra_compile_args=extra_args,
+                   extra_link_args=extra_link_args)
 
 # NumyTypemapTests setup
 setup(name="polytopewalk",
