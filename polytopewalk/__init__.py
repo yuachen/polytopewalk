@@ -1,7 +1,7 @@
 import numpy as np
 import time
 
-import pwalk
+import polytopewalk.pwalk as pwalk
 
 
 def define_polytope(d, rep=0):
@@ -38,7 +38,7 @@ def run_dikin_walk(experiments, iterations, A, b, r):
         # Profiling
         t1 = time.time()
         if exp % (experiments / 10) == 0:
-            print 'Experiment Number: %d, Time Taken: %.2f' % (exp, t1 - t0)
+            print('Experiment Number: %d, Time Taken: %.2f' % (exp, t1 - t0))
             t0 = t1
     return rvs
 
@@ -60,7 +60,7 @@ def run_vaidya_walk(experiments, iterations, A, b, r):
         # Profiling
         t1 = time.time()
         if exp % (experiments / 10) == 0:
-            print 'Experiment Number: %d, Time Taken: %.2f' % (exp, t1 - t0)
+            print('Experiment Number: %d, Time Taken: %.2f' % (exp, t1 - t0))
             t0 = t1
     return rvs
 
@@ -83,7 +83,7 @@ def run_john_walk(experiments, iterations, A, b, r):
         # Profiling
         t1 = time.time()
         if exp % (experiments / 10) == 0:
-            print 'Experiment Number: %d, Time Taken: %.2f' % (exp, t1 - t0)
+            print('Experiment Number: %d, Time Taken: %.2f' % (exp, t1 - t0))
             t0 = t1
     return rvs
 
