@@ -1,5 +1,4 @@
 #include <boost/random.hpp>
-#include <eigen/Dense>
 
 #include "math_functions.hpp"
 #include <cmath>

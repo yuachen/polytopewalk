@@ -1,7 +1,7 @@
 #ifndef PWALK_UTIL_MATH_FUNCTIONS_HPP_
 #define PWALK_UTIL_MATH_FUNCTIONS_HPP_
 
-#include <eigen/Dense>
+#include <Eigen/Dense>
 
 namespace pwalk {
 
