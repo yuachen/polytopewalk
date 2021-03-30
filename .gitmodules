@@ -1,0 +1,3 @@
+[submodule "polytopewalk/src/externals/Eigen"]
+	path = polytopewalk/src/externals/Eigen
+	url = git@github.com:libigl/eigen.git
