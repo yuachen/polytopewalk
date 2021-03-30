@@ -4,6 +4,11 @@ https://arxiv.org/abs/1710.08165
 by Yuansi Chen, Raaz Dwivedi, Martin J. Wainwright, Bin Yu
 
 ## Use Guide
+- Preparation: make sure you have boost (https://www.boost.org/) (TODO)
+- Use recursive to pull the repo as follows, so that you get the external package Eigen (https://eigen.tuxfamily.org/). Otherwise, you have to download Eigen yourself and put it in the folder polytopewalk/src/external
+```bash
+git clone --recursive https://github.com/yuachen/polytopewalk.git
+```
 - To install the package to default python
 ```bash
 pip install .
