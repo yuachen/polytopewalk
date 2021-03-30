@@ -1,7 +1,7 @@
 #ifndef PWALK_PUBLIC_INTERFACE_HPP_
 #define PWALK_PUBLIC_INTERFACE_HPP_
 
-#include <eigen/Dense>
+#include <Eigen/Dense>
 
 Eigen::MatrixXd generateDikinWalkSamples(const Eigen::VectorXd& initialization, const Eigen::MatrixXd& cons_A, const Eigen::VectorXd& cons_b, const double r, const int nb_samples);
 
