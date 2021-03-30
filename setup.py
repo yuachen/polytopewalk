@@ -60,7 +60,7 @@ if sys.platform == 'darwin':
         extra_link_args=["-stdlib=libc++"]
 else:  # not supported yet. to be tested
     os.environ["CC"] = "g++"  # force compiling c as c++
-    extra_args = ["--verbose", "-fno-rtti"]
+    extra_args = ["--verbose", "-std=c++11", "-fno-rtti"]
     extra_link_args=["-stdlib=libc++"]
 
 # inplace extension module
