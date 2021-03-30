@@ -23,20 +23,22 @@ srcDir = os.path.abspath('polytopewalk/src')
 for root, dirnames, filenames in os.walk(srcDir):
     # add c++ files in directory to src
     absPath = root
-    globStr = "%s/*.c*" % absPath
+    globStr = "%s/*.cpp" % absPath
     files = glob.glob(globStr)
     print(files)
     includeDirs.append(absPath)
     srcFiles += files
     # add c++ files in subdirectories to src
-    for dirname in dirnames:
+    for dirname in ['util', 'external', 'external/Eigen']:
         absPath = os.path.join(root, dirname)
         print('adding dir to path: %s' % absPath)
-        globStr = "%s/*.c*" % absPath
+        globStr = "%s/*.cpp" % absPath
         files = glob.glob(globStr)
         print(files)
         includeDirs.append(absPath)
         srcFiles += files
+    # only one level is needed for os.walk
+    break
 
 print("includeDirs:")
 print(includeDirs)
@@ -54,11 +56,11 @@ if sys.platform == 'darwin':
         # letting us use c++11; also, we don't use dynamic_cast<>, so
         # we can compile without RTTI to avoid its overhead
         extra_args = ["-std=c++11", "-stdlib=libc++",
-                      "-mmacosx-version-min=10.9", "-fno-rtti"]
+                      "-mmacosx-version-min=10.9", "--verbose", "-fno-rtti"]
         extra_link_args=["-stdlib=libc++"]
 else:  # not supported yet. to be tested
     os.environ["CC"] = "g++"  # force compiling c as c++
-    extra_args = ['-fno-rtti']
+    extra_args = ["--verbose", "-fno-rtti"]
     extra_link_args=["-stdlib=libc++"]
 
 # inplace extension module
