@@ -1,7 +1,7 @@
 #ifndef PWALK_VAIDYA_WALKER_HPP_
 #define PWALK_VAIDYA_WALKER_HPP_
 
-#include <eigen/Dense>
+#include <Eigen/Dense>
 #include "util/math_functions.hpp"
 #include "walker.hpp"
 
