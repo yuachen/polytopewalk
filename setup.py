@@ -59,6 +59,7 @@ if sys.platform == 'darwin':
 else:  # not supported yet. to be tested
     os.environ["CC"] = "g++"  # force compiling c as c++
     extra_args = ['-fno-rtti']
+    extra_link_args=["-stdlib=libc++"]
 
 # inplace extension module
 _pwalk = Extension("_pwalk",
